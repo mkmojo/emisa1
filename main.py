@@ -124,7 +124,7 @@ def step1(econ_journal_ids, econ_only=True):
             x.append(item[0])
             y.append(item[1])
         plt.plot(x, y, 'o')
-        plt.axis([int(year) - 50,int(year) + 10, 0, max(y) + 0.5 ])
+        plt.axis([int(year) - 50,int(year), 0, max(y) + 0.5 ])
         if econ_only:
             save_fig("results/step1/econ/img/" + file[0:(len(file) - 4)])
             save_src("results/step1/econ/src/" + file[0:(len(file) - 4)], ratio)
