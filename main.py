@@ -201,12 +201,11 @@ def step3(econ_journal_ids):
 
     x = list()
     y = list()
-    for item in num_total_parent_paper_lst:
+    for item in num_total_econ_paper_lst:
         x.append(int(item[0]))
         y.append(item[1])
     plt.plot(x, y, 'o')
-    plt.axis([int(year) - 50,int(year) + 10, 0, max(y) + 0.1 * max(y) ])
-    save_fig("results/step3/econ/img/econ_number" )
+    save_fig("results/step3/econ/img/econ_number")
     save_src("results/step3/econ/src/econ_number", num_total_econ_paper_lst)
 
     x = list()
