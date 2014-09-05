@@ -300,10 +300,11 @@ def parse_inputfile(input_filename):
 def main():
     econ_journal_ids = parse_inputfile("econ_journal_ids.txt")
 
-    step1(econ_journal_ids, econ_only=True)
     step2(econ_journal_ids)
     step3(econ_journal_ids)
-    step5(econ_journal_ids, econ_only=True)
+    for flag in [True, False]:
+        step1(econ_journal_ids, econ_only=flag)
+        step5(econ_journal_ids, econ_only=flag)
 
 
 if __name__ == "__main__":
